@@ -10,15 +10,26 @@ npm i
 ```
 
 ## Usage
+there are 3 scripts to play with Function Calling API. You can run them with the following commands:
 
 ```bash
+# calculator
 npm start
+
+# getCurrentTime
+# 1. get the time
+npm run getCurrentTime
+
+# timeToSport: 
+# 1. get the time
+# 2. choose a sport according to the time
+npm run timeToSport
 ```
 
 ## Output
 
 ```bash
-❯ npm test
+❯ npm start
 
 > openai-function-calling-nodejs@1.0.0 test
 > node index.js
