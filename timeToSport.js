@@ -49,6 +49,7 @@ const getCompletion = async (messages) => {
     model: "gpt-3.5-turbo-0613",
     messages,
     functions: [
+      // tools.SerpAPI.desc 用于获取搜索引擎结果
       {
         name: "getCurrentTime",
         description: "Get the current time",

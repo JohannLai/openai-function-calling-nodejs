@@ -16,6 +16,7 @@
   "author": "johannli",
   "license": "MIT",
   "dependencies": {
-    "openai": "^3.3.0"
+    "openai": "^3.3.0",
+    "openai-function-calling-tools": "^2.0.1"
   }
 }
