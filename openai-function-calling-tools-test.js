@@ -43,11 +43,12 @@ while (true) {
     console.log(message.content);
     break;
   } else if (finish_reason === "function_call") {
-    const fnName = message.function_call.name;
-    const args = message.function_call.arguments;
+    const { name: fnName, arguments: args } = message.function_call;
 
     const fn = functions[fnName];
-    const result = await fn(...Object.values(JSON.parse(args)));
+    const parsedArgs = JSON.parse(args);
+    const argValues = Object.values(parsedArgs);
+    const result = await fn(...argValues);
 
     messages.push({
       role: "assistant",
